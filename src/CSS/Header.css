@@ -1,0 +1,85 @@
+
+.over {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border: 2px solid purple;
+    position: fixed;
+    z-index: 1;
+ 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+  
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-item {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, border-color 0.3s;
+}
+
+.header-item:hover {
+    background-color: rgb(238, 196, 238);
+    border-color: purple;
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 500px) {
+    .header-item{
+        width: 40px;
+        height: 40px;
+    }
+    .header-list{
+        font-size:small;
+    }
+    .header-item{
+        width: 30px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-item{
+        width: 30px;
+        height: 40px;
+    }
+    .header-list{
+        font-size:x-small;
+    }
+    .header-item{
+        width: 20px;
+        height: 25px;
+    }
+}

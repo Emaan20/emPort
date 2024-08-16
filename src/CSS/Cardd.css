@@ -1,0 +1,167 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add some space between the icons */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+@keyframes scaleInFromRight {
+    0% {
+        transform: translateX(100vw) scale(0.1); /* Start off-screen to the right and very small */
+        opacity: 0; /* Start with 0 opacity */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* End at the original position and size */
+        opacity: 1; /* End with full opacity */
+    }
+}
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: -400px;
+   
+}
+
+.projects-container h1 {
+    margin-bottom: 30px; /* Ensure 30px space below this heading */
+    color: purple;
+    text-align: center;
+    
+}
+
+.projects-container h2{
+    color:rgb(250, 199, 250);
+    text-shadow: 
+    1px 1px 0 purple, 
+    -1px -1px 0 purple, 
+    1px -1px 0 purple, 
+    -1px 1px 0 purple;
+}
+
+.card {
+    width: 600px;
+    height: 350px;
+    border: 2px solid purple;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    margin: 20px 0; /* Add margin between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: scaleInFromRight 2s ease-out; /* Apply the scale and slide-in animation */
+    transform-origin: right center; 
+}
+
+.card img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    
+}
+
+#cardimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures the div takes up the full width of the card */
+    margin-right: 20px;
+    margin-bottom: 20px; /* Adjusts margin for spacing in column layout */
+    position: relative;
+    left: 20px;
+}
+
+
+#demoimg {
+    width: 42px;
+    position: relative;
+    top:80px;
+    left:102px;
+}
+#demoimg:hover{
+    transform: scale(1.5);
+}
+
+
+
+#gitimg {
+    width: 44px;
+    position: relative;
+    top:130px;
+    left:30px;
+   
+}
+
+#gitimg:hover{
+    transform: scale(1.5);
+}
+
+.card h2, .card p {
+    margin: 10px 0;
+}
+
+.card:hover {
+    transform: scale(1.0);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Stack elements vertically */
+        height: fit-content;
+        align-items: center; /* Center all card contents */
+        text-align: center;
+        width: 400px;
+    }
+
+    .card img {
+        margin: 0 auto 10px; /* Center the image and add margin at the bottom */
+   align-items: center;
+    }
+    .card .imgs {
+        display: inline-flex;
+        justify-content: space-between;
+        margin: 10px 10px;
+        align-items: center;
+    }
+
+    #demoimg, #gitimg {
+        position: static; /* Reset position for the icons */
+        margin: 0; /* Remove margin */
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        flex-direction: column; /* Stack elements vertically */
+        height: fit-content;
+        align-items: center; /* Align items to the start for better spacing */
+        text-align: left; /* Align text to the left */
+        width: 270px;
+    }
+    .card .imgs {
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    #demoimg, #gitimg {
+        margin: 0 5px;
+    }
+}
+
+

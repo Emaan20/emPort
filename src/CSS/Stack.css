@@ -1,0 +1,168 @@
+.stack-container {
+    border: 2px solid pink;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: auto; /* Change to auto so it adjusts based on content */
+    margin: 20px auto;
+    background-color: purple; /* Keep the background purple */
+    position: relative;
+    bottom: 270px;
+}
+
+.stack-container h2 {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: pink;
+    margin-bottom: 20px;
+    text-shadow: 
+    1px 0px 0 wheat, 
+    -1px -1px 0 wheat, 
+    1px -1px 0 wheat, 
+    -1px 1px 0 wheat;
+  
+}
+
+.stack-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping to move last three icons to the next line */
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-text {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icon-container:hover .icon-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.stack-icons img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.stack-icons img:hover {
+    transform: scale(1.2);
+}
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.stack-icons img.animate {
+    animation:slideInFromLeft 1s ease-out forwards;
+}
+
+.stack-icons img:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.stack-icons img:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.stack-icons img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.stack-icons img:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.stack-icons img:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.stack-icons img:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.stack-icons img:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.stack-icons img:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+@media (max-width: 1555px) {
+    .stack-container{
+        position: relative;
+        bottom: 3300px;
+    }
+}
+
+@media (max-width: 1108px) {
+    .stack-icons img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .stack-container{
+        position: relative;
+        top: 100px;
+    }
+}
+
+@media (max-width: 760px) {
+    .stack-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stack-container {
+        position: relative;
+        top: 700px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stack-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stack-container {
+        position: relative;
+        top: 790px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

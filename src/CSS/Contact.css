@@ -1,0 +1,140 @@
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative; 
+    border: 2px solid purple;
+}
+
+.contact-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire screen */
+    z-index: -1; 
+
+
+}
+
+.contact-image {
+    max-width: 380px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100vh); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(224, 193, 217, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; 
+    animation: slideUp 2s ease-out; 
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #4d0d37;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #81114f;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid purple;
+    border-radius: 4px;
+    font-size: 16px;
+    
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+    
+}
+
+button {
+    padding: 10px 20px;
+    border: 2PX SOLID purple;
+    border-radius: 4px;
+    background-color: rgb(160, 122, 160);
+    color: #e6d6df;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    border: none
+}
+
+button:hover:not(:disabled) {
+    background-color: purple;
+}
+
+@media (max-width: 1555px) 
+{  .contact-wrapper{
+    position: relative;
+    bottom: -70px;
+    height: 100%;
+    width: 100%;
+}
+}
+
+@media (max-width: 500px) {
+    
+        .contact-image
+        {
+            width:300px;
+            margin-top: 50px;
+        }
+        .contact-wrapper{
+            position: relative;
+            bottom: -70px;
+            height: 100%;
+            width: 100%;
+        }
+       
+        
+}

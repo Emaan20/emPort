@@ -1,0 +1,280 @@
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+}
+
+@keyframes floatDownUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Move down */
+    }
+}
+
+
+.head{
+    position: sticky;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); 
+    text-align: center;
+    background-color: rgb(238, 196, 238);
+    font-family: 'Inter', sans-serif;
+    padding-top: 100px; 
+ 
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Align text and icons vertically */
+    text-align: center;
+}
+
+.text {
+    margin-bottom: 20px; /* Space between text and icons below */
+    position: relative;
+  
+}
+
+.text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+    position: relative;
+    right:200px;
+    top:80px;
+}
+
+.text h1 span{
+    color: purple;
+}
+
+.text h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #666;
+    position: relative;
+    right:200px;
+    top:80px;
+
+}
+
+/* Hide the text initially */
+.animated-heading {
+    overflow: hidden; /* Ensures that the text will be hidden during the animation */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: .15em solid purple; /* Optional cursor effect */
+    animation: typing 3.5s steps(30, end), blink 1s step-end infinite;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for cursor blinking animation */
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: purple; }
+}
+
+@keyframes scaleInFromRight {
+    0% {
+        transform: translateX(100vw) scale(0.1); /* Start off-screen to the right and very small */
+        opacity: 0; /* Start with 0 opacity */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* End at the original position and size */
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+
+
+
+
+
+.text .developer-icon img {
+    width: 300px;
+    position: relative;
+ left: 250px;
+ bottom: 200px;
+ animation: floatUpDown 3s ease-in-out infinite;
+ animation: scaleInFromRight 1.5s ease-out; /* Apply the scale and slide-in animation */
+    transform-origin: right center;
+ 
+}
+
+
+
+.icons img {
+    width: 100px;
+    height: auto;
+   
+}
+
+
+.icon-below img {
+    width: 200px;
+    height: auto;
+}
+
+.icons .htmltag  {
+    width: 150px;
+    height: auto;
+    position: relative;
+    top:10px;
+    animation: floatUpDown 3s ease-in-out infinite;
+   
+}
+
+.icons .cup  {
+
+    height: auto;
+    width: 70px;
+    position: relative;
+    top:5px;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.icons .com  {
+
+    height: auto;
+    width: 100px;
+    position: relative;
+    top:-5px;
+    animation: floatDownUp 3s ease-in-out infinite;
+}
+
+
+.icons .lap {
+
+    height: auto;
+    width: 130px;
+    position: relative;
+    top:20px;
+    animation: floatDownUp 3s ease-in-out infinite;
+}
+
+.icons .key {
+
+    height: auto;
+    width: 100px;
+    position: relative;
+    top:1px;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.icons .mouse {
+
+    height: auto;
+    width: 80px;
+    position: relative;
+    top:0px;
+    animation: floatDownUp 3s ease-in-out infinite;
+}
+
+
+
+
+@media (max-width: 750px) {
+    .text h1 {
+        font-size: 2rem;
+      left:20px;
+      top:-10px;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+        left:20px;
+        top:-10px;
+    }
+
+   .content{
+    display: flex;
+    flex-direction: column;
+   }
+    .text .developer-icon img {
+        height: 200px;
+        width: 200px; 
+        top:10px;
+        left:40px
+    }
+
+    .icons img {
+        padding-top: 90px;
+        width: 10px;
+    }
+
+    .icons .htmltag  {
+        width: 70px;
+        height: auto;
+        position: relative;
+        top:5px;
+    }
+    
+    .icons .cup  {
+    
+        height: auto;
+        width: 40px;
+        position: relative;
+        top:1px;
+    }
+    
+    .icons .lap {
+    
+        height: auto;
+        width: 70px;
+        top:15px;
+        
+    }
+    
+    .icons .key {
+    
+        height: auto;
+        width: 70px;
+        position: relative;
+        top:1px;
+    }
+    
+    .icons .mouse {
+    
+        height: auto;
+        width: 50px;
+        position: relative;
+        top:5px;
+    }
+
+    .icons .com {
+    
+        height: auto;
+        width: 50px;
+        position: relative;
+        top:3px;
+    
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .text {
+        
+        right:25px;
+    
+    
+    }
+}
+
+
