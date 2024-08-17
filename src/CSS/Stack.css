@@ -110,12 +110,12 @@
     animation-delay: 1.6s;
 }
 
-@media (max-width: 1555px) {
+/* @media (max-width: 1555px) {
     .stack-container{
         position: relative;
         bottom: 3300px;
     }
-}
+} */
 
 @media (max-width: 1108px) {
     .stack-icons img {
